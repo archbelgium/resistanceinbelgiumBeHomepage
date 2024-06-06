@@ -20,7 +20,7 @@ function search() {
         displayResults([]);
         return;
     }
-    const apiUrl = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${encodeURIComponent(searchTerm)}&language=${language}&format=json&origin=*`;
+    const apiUrl = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${encodeURIComponent(searchTerm)}&language=${language}&uselang=${language}&format=json&origin=*`;
 
     fetch(apiUrl)
         .then(response => response.json())
