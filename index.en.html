@@ -3,21 +3,117 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Resistance in Belgium</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    </noscript>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preload" as="image" href="images/hero-section.webp">
+    <style>
+		body {
+			background-color: rgba(40, 92, 62, 0.06) !important;
+		}
+
+		.hero-section {
+			background: url('images/hero-section.webp') no-repeat center center;
+			background-size: cover;
+			position: relative;
+			height: 50vh;
+			color: white;
+			text-align: center;
+		}
+
+		@media (max-width: 768px) {
+			.hero-section {
+				height: 65vh;
+			}
+		}
+
+		.hero-content {
+			margin-top: 5vh;
+		}
+
+		.search-bar {
+			max-width: 1200px;
+		}
+
+		.info-container {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		.info-text {
+			background-color: rgba(28, 41, 31, 0.8);
+			padding: 1rem;
+			border-radius: 0.5rem;
+            font-size: smaller;
+		}
+
+		@media (max-width: 768px) {
+			.info-container {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+
+			.info-text {
+				padding: 0.75rem;
+			}
+		}
+
+		.input-group-text {
+			background-color: #1c291f;
+			border-top-right-radius: 0.5rem !important;
+			border-bottom-right-radius: 0.5rem !important;
+			border: none;
+		}
+
+		.text-link {
+			font-weight: bold;
+			border-bottom: 2px solid #f99d18;
+			color: inherit;
+			font-style: italic;
+			padding-bottom: 2px;
+			text-decoration: none;
+			transition: 0.1s;
+		}
+
+		.language-selector {
+			background-color: #f8f9fa;
+		}
+
+		.language-selector img {
+			margin-right: 7px;
+		}
+
+		.language-selector li {
+			border-bottom: 1px solid #eedfdfff;
+			padding: 5px;
+		}
+
+		.language-selector .dropdown-item:hover {
+			background-color: rgba(40, 92, 62, 0.05);
+		}
+    </style>
+    <meta name="description" content="Learn about the Belgian Resistance during World War II. Explore the stories of bravery and sacrifice that contributed to the liberation of Belgium.">
+    <meta name="keywords" content="Belgian Resistance, World War II, Belgium history, resistance movements">
+    <link rel="canonical" href="https://example.com/resistance-in-belgium">
 </head>
-<body class="min-vh-100 d-flex flex-column">
-    <nav class="navbar navbar-expand-lg bg-white">
+<body class="min-vh-100 d-flex flex-column bg-light">
+<div class="hero-section">
+    <nav class="navbar navbar-expand-lg w-100 fs-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/logo.png" height="24">
+                <img src="images/logos/white-logo.png" height="150" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar-items">
+            <div class="collapse navbar-collapse float-end" id="navbar-items">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Optional Navbar Items -->
+                </ul>
+                <ul class="navbar-nav d-sm-flex flex-row fs-6 gap-2 fw-bolder">
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
@@ -25,76 +121,107 @@
                         <a class="nav-link" href="#">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Data</a>
+                        <a class="nav-link mr-5" href="#">Data</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav d-sm-flex flex-row">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FR</a>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link">/</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">NL</a>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link">/</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">DE</a>
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-link">/</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">EN</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-medium" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="images/icons/en.png" alt="English" width="20"> English
+                        </a>
+                        <ul class="dropdown-menu language-selector" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#"><img src="images/icons/fr.svg" alt="French" width="20"> Français</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="images/icons/nl.svg" alt="Dutch" width="20"> Nederlands</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="images/icons/de.svg" alt="German" width="20"> Deutsch</a></li>
+                            <li><a class="dropdown-item" href="#"><img src="images/icons/en.png" alt="English" width="20"> English</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 bg-danger w-100" style="height: 330px;">
-            </div>
-        </div>
-    </div>
-
-    <div class="container p-3 flex-grow-1">
-        <div class="row">
-            <div class="col">
-                <div class="input-group mb-3">
-                    <input type="search" class="form-control" id="search" placeholder="Search for a keyword, a name, a place, an event, or a source" oninput="debounceSearch()" onfocus="showResultsIfAny()">
-                    <span class="input-group-text">
-                        <svg fill="#000000" height="20px" width="20px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490.4 490.4" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796 s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"></path> </g> </g></svg>
-                    </span>
-                    <div id="results" class="dropdown-menu w-100"></div>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada quam lectus, sit amet tincidunt orci auctor a. Fusce ac feugiat dui. Curabitur semper ipsum a ligula tristique sollicitudin. Morbi id ante diam. Mauris sit amet molestie orci. Nunc eget est enim. Vestibulum eu dignissim risus, quis ornare arcu. Mauris nec nisi tempor metus ornare iaculis. Nullam sit amet quam vitae turpis faucibus sagittis at nec leo. Nulla commodo malesuada maximus. Etiam non ornare nulla, vitae aliquet odio. Curabitur tincidunt et risus non fermentum.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div style="background-color: var(--bs-tertiary-bg);">
-        <div class="container p-3">
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div style="width: 200px; height: 100px" class="bg-secondary">Logo</div>
-                        <div style="width: 200px; height: 100px" class="bg-secondary">Logo</div>
-                        <div style="width: 200px; height: 100px" class="bg-secondary">Logo</div>
-                        <div style="width: 200px; height: 100px" class="bg-secondary">Logo</div>
-                    </div>
+    <div class="container hero-content">
+        <h1 class="display-3 fw-bold">Resistance in Belgium</h1>
+        <p class="lead fw-bolder">Search for members of the resistance</p>
+        <div class="search-bar input-group mb-3 text-ce">
+            <input type="search" class="form-control" id="search" placeholder="Search for a keyword, a name, a place, an event, or a source" oninput="debounceSearch()" onfocus="showResultsIfAny()" autocomplete="off" />
+            <span class="input-group-text">
+                <img src="images/icons/search.svg" height="20" width="20"/>
+            </span>
+            <div id="results" class="dropdown-menu">
+                <div id="results-content"></div>
+                <div id="info-message" class="sticky-message" style="display: block;">
+                    <img src="images/icons/info-icon.svg" height="22" alt="" class="mb-1 pr-5">
+                    <small>We will keep updating the data. <br class="d-block d-md-none"> Stay tuned for more updates.</small>
                 </div>
             </div>
         </div>
+        <div class="text-center info-container">
+            <small class="info-text">
+                <img src="images/icons/white-info-icon.svg" height="22" alt="" class="mb-1 pr-5">
+                All data is not yet online and this will take place in several phases over several years. Stay tuned for more updates.
+            </small>
+        </div>
     </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+<section class="section section-ethics container my-5">
+    <div class="section-content">
+        <div class="row">
+            <h3 class="display-5 fw-medium mb-4">Resistance in Belgium</h3>
+            <p class="paragraph">
+                During World War II, Belgium was home to a significant resistance movement. The Belgian Resistance played a crucial role in gathering
+                intelligence, aiding Allied soldiers, and sabotaging German military operations. Comprising various groups such as the Front de
+                l'Indépendance, Groupe G, and the Armée Secrète, these brave individuals risked their lives to fight against the occupying forces.
+            </p>
+            <p class="paragraph">
+                The resistance efforts included distributing underground newspapers, organizing escape routes for downed Allied airmen, and carrying
+                out acts of sabotage to disrupt the German war effort. Women and men from all walks of life participated, demonstrating incredible
+                courage and solidarity in the face of oppression.
+            </p>
+            <p class="paragraph">
+                Today, the legacy of the Belgian Resistance is remembered and honored for its contribution to the liberation of Belgium and the
+                ultimate defeat of Nazi Germany. Their stories of bravery and sacrifice continue to inspire future generations.
+            </p>
+            <p class="mt-3"><a class="text-link" href="https://en.wikipedia.org/wiki/Belgian_Resistance">Learn More About the Belgian Resistance</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer mt-auto">
+    <div class="container">
+        <div class="footer-content mb-5">
+            <img src="images/logos/logo1-white.png" class="footer-logo" alt="Logo 1">
+            <img src="images/logos/logo2-white.png" class="footer-logo" alt="Logo 2">
+            <img src="images/logos/logo3-white.png" class="footer-logo" alt="Logo 3">
+            <img src="images/logos/white-logo.png" class="footer-logo" alt="Logo 4">
+        </div>
+        <div class="d-flex justify-content-around mt-5">
+            <div class="contact">
+                <p class="fw-bold">Contact</p>
+                <p>statearchive.org@gmail.com</p>
+            </div>
+            <div class="follow">
+                <p class="fw-bold">Follow us:</p>
+                <div class="d-flex gap-3">
+                    <a href="#">
+                        <img src="images/icons/twitter.svg" height="24" width="24" alt="" />
+                    </a>
+                    <a href="#">
+                        <img src="images/icons/instagram.svg" height="24" width="24" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-light">Statement of Ethics</a>
+                <a href="#" class="btn btn-outline-light">Support Our Mission</a>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>© 2024 Resistance in Belgium. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
