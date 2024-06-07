@@ -1,5 +1,5 @@
 let debounceTimeout;
-let language = 'en';
+let language = new URLSearchParams( window.location.search ).get( 'language' ) || 'en';
 let currentFocus = -1;
 
 const searchInput = document.getElementById( 'search' );
