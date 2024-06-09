@@ -1,5 +1,4 @@
 let debounceTimeout;
-let language = new URLSearchParams( window.location.search ).get( 'language' ) || 'en';
 let currentFocus = -1;
 
 const searchInput = document.getElementById( 'search' );
@@ -54,7 +53,11 @@ function search() {
 		return;
 	}
 
-	const apiUrl = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${encodeURIComponent(searchTerm)}&language=${language}&uselang=${language}&format=json&origin=*`;
+	// Get the language from the URL or default to 'en'
+	const urlParams = new URLSearchParams( window.location.search );
+	const language = urlParams.get( 'lang' ) || 'en';
+
+	const apiUrl = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${ encodeURIComponent( searchTerm ) }&language=${ language }&uselang=${ language }&format=json&origin=*`;
 	fetch( apiUrl )
 		.then( response => response.json() )
 		.then( data => displayResults( data.search ) )
@@ -102,6 +105,10 @@ function showResultsIfAny() {
 	if( resultsContent.innerHTML.trim() ) {
 		resultsDiv.classList.add( 'show' );
 	}
+}
+
+function changeLanguage( lang ) {
+	window.location.href = `${ window.location.pathname }?lang=${ lang }`;
 }
 
 resultsDiv.addEventListener( 'scroll', () => {
