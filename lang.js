@@ -4,7 +4,8 @@ const translations = {
 		metaDescription: "Learn about the Belgian Resistance during World War II. Explore the stories of bravery and sacrifice that contributed to the liberation of Belgium.",
 		hero: {
 			title: "Resistance in Belgium",
-			description: "Search for members of the resistance"
+			description: "Search for members of the resistance",
+            searchPlaceholder: "Search for a keyword, a name, a place, an event, or a source"
 		},
 		content: {
 			title: "Resistance in Belgium",
@@ -31,7 +32,8 @@ const translations = {
 		metaDescription: "Découvrez la résistance belge pendant la Seconde Guerre mondiale. Explorez les histoires de bravoure et de sacrifice qui ont contribué à la libération de la Belgique.",
 		hero: {
 			title: "Résistance en Belgique",
-			description: "Rechercher des membres de la résistance"
+			description: "Rechercher des membres de la résistance",
+            searchPlaceholder: "Recherchez un mot-clé, un nom, un lieu, un événement ou une source"
 		},
 		content: {
 			title: "Résistance en Belgique",
@@ -58,7 +60,8 @@ const translations = {
 		metaDescription: "Lees meer over het Belgische verzet tijdens de Tweede Wereldoorlog. Ontdek de verhalen van moed en opoffering die hebben bijgedragen aan de bevrijding van België.",
 		hero: {
 			title: "Verzet in België",
-			description: "Zoek naar leden van het verzet"
+			description: "Zoek naar leden van het verzet",
+            searchPlaceholder: "Zoek naar een trefwoord, een naam, een plaats, een gebeurtenis of een bron"
 		},
 		content: {
 			title: "Verzet in België",
@@ -85,7 +88,8 @@ const translations = {
 		metaDescription: "Erfahren Sie mehr über den belgischen Widerstand während des Zweiten Weltkriegs. Entdecken Sie Geschichten von Tapferkeit und Opferbereitschaft, die zur Befreiung Belgiens beigetragen haben.",
 		hero: {
 			title: "Widerstand in Belgien",
-			description: "Suche nach Mitgliedern des Widerstands"
+			description: "Suche nach Mitgliedern des Widerstands",
+            searchPlaceholder: "Suchen Sie nach einem Schlüsselwort, einem Namen, einem Ort, einem Ereignis oder einer Quelle"
 		},
 		content: {
 			title: "Widerstand in Belgien",
@@ -126,6 +130,7 @@ const loadContentForLanguage = lang => {
 	document.title = getTranslation( lang, 'title' );
 	document.querySelector( 'meta[name="description"]' ).setAttribute( "content", getTranslation( lang, 'metaDescription' ) );
 	document.querySelectorAll( '[data-translate]' ).forEach( el => el.innerHTML = getTranslation( lang, el.getAttribute( 'data-translate' ) ) );
+    document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
 
 	const { flag, name } = languageNames[lang];
 	document.getElementById( 'languageDropdown' ).innerHTML = `<img src="${ flag }" alt="${ name }" width="20"> ${ name }`;
@@ -139,5 +144,3 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		loadContentForLanguage( lang );
 	}
 } );
-
-
