@@ -60,10 +60,6 @@ ul {
 	margin-right: 50px;
 }
 
-.footer-logo {
-	height: 175px;
-}
-
 .footer-content {
 	display: flex;
 	justify-content: center;
@@ -89,6 +85,32 @@ ul {
 
 .footer a:hover {
 	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+	.footer-logo {
+		height: 120px;
+	}
+
+	.footer-logo-4 {
+		height: 80px;
+	}
+
+	.footer-content {
+		flex-wrap: nowrap;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-logo {
+		height: 80px;
+		margin-bottom: 20px;
+	}
 }
 
 .result-label {
@@ -121,9 +143,9 @@ ul {
 }
 
 
-
 @media (max-width: 768px) {
-	.language-selector/*, .navbar-nav*/ {
+	.language-selector /*, .navbar-nav*/
+	{
 		position: absolute !important;
 	}
 
