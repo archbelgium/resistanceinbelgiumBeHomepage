@@ -46,22 +46,54 @@ function debounceSearch() {
 	debounceTimeout = setTimeout( search, 400 );
 }
 
-function search() {
+async function search() {
 	const searchTerm = searchInput.value.trim();
 	if( !searchTerm ) {
 		displayResults( [] );
 		return;
 	}
 
-	// Get the language from the URL or default to 'en'
-	const urlParams = new URLSearchParams( window.location.search );
-	const language = urlParams.get( 'lang' ) || 'en';
+	try {
+		// Get the language from the URL or default to 'en'
+		const urlParams = new URLSearchParams( window.location.search );
+		const language = urlParams.get( 'lang' ) || 'en';
 
-	const apiUrl = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${ encodeURIComponent( searchTerm ) }&language=${ language }&uselang=${ language }&format=json&origin=*`;
-	fetch( apiUrl )
-		.then( response => response.json() )
-		.then( data => displayResults( data.search ) )
-		.catch( error => console.error( 'Error fetching data:', error ) );
+		const searchData = await searchEntities( searchTerm, language );
+		const entityIds = searchData.search.map( result => result.id );
+		const entities = await getEntities( entityIds );
+
+		const results = searchData.search.map( result => {
+			const entity = entities.entities[ result.id ];
+			const dateOfBirth = isPerson( entity ) ? getDateOfBirth( entity ) : null;
+			return { ...result, dateOfBirth };
+		} );
+
+		displayResults( results );
+	} catch ( error ) {
+		console.error( 'Error fetching data:', error );
+	}
+}
+
+async function searchEntities( searchTerm, language ) {
+	const url = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${ encodeURIComponent( searchTerm ) }&language=${ language }&uselang=${ language }&format=json&origin=*`;
+	const response = await fetch( url );
+	return response.json();
+}
+
+async function getEntities( entityIds ) {
+	const url = `https://data.arch.be/w/api.php?action=wbgetentities&ids=${ entityIds.join( '|' ) }&props=claims&format=json&origin=*`;
+	const response = await fetch( url );
+	return response.json();
+}
+
+function isPerson( entity ) {
+	const personClaim = entity.claims.P1;
+	return personClaim && personClaim[0].mainsnak.datavalue.value.id === 'Q2';
+}
+
+function getDateOfBirth( entity ) {
+	const dateOfBirthClaim = entity.claims.P10;
+	return dateOfBirthClaim ? dateOfBirthClaim[0].mainsnak.datavalue.value : null;
 }
 
 function displayResults( results ) {
@@ -83,7 +115,7 @@ function displayResults( results ) {
 
 		const label = document.createElement( 'div' );
 		label.classList.add( 'result-label' );
-		label.textContent = result.label;
+		label.textContent = result.label + ( result.dateOfBirth ? ` (${ result.dateOfBirth })` : '' );
 
 		const description = document.createElement( 'div' );
 		description.classList.add( 'result-description', 'small' );
