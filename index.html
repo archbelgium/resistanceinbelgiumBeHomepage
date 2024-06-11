@@ -112,6 +112,30 @@
 			text-decoration: none;
 			transition: 0.1s;
 		}
+
+		.navbar-toggler {
+			border: 1px solid white;
+		}
+
+		.navbar-toggler:focus {
+			border: 2px solid white;
+            box-shadow: none;
+		}
+
+		.navbar-toggler-icon {
+			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+		}
+
+        @media (max-width: 768px) {
+			.navbar-brand {
+				margin-top: 0.5rem;
+				margin-left:0;
+
+                img {
+                    height: 80px !important;
+                }
+			}
+		}
     </style>
 </head>
 <body class="min-vh-100 d-flex flex-column bg-light">
