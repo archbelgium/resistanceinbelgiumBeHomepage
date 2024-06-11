@@ -60,21 +60,6 @@ ul {
 	margin-right: 50px;
 }
 
-.sticky-message {
-	position: sticky;
-	bottom: -20px;
-	left: 0;
-	right: 0;
-	background: var(--sticky-message-bg-color);
-	color: var(--sticky-message-text-color);
-	margin-top: 10px;
-	display: block;
-	text-align: right;
-	padding-top: 20px;
-	transition: padding-bottom 0.5s ease;
-	font-style: italic;
-}
-
 .footer-logo {
 	height: 200px;
 }

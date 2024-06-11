@@ -5,7 +5,7 @@ const translations = {
 		hero: {
 			title: "Resistance in Belgium",
 			description: "Search for members of the resistance",
-            searchPlaceholder: "Search for a keyword, a name, a place, an event, or a source"
+			searchPlaceholder: "Search for a keyword, a name, a place, an event, or a source"
 		},
 		content: {
 			title: "Resistance in Belgium",
@@ -22,7 +22,6 @@ const translations = {
 			rightsReserved: "© 2024 Resistance in Belgium. All rights reserved."
 		},
 		infoText: "All data is not yet online and this will take place in several phases over several years. Stay tuned for more updates.",
-		updateMessage: "We will keep updating the data. <br class='d-block d-md-none'> Stay tuned for more updates.",
 		about: "About",
 		faq: "FAQ",
 		data: "Data"
@@ -33,7 +32,7 @@ const translations = {
 		hero: {
 			title: "Résistance en Belgique",
 			description: "Rechercher des membres de la résistance",
-            searchPlaceholder: "Recherchez un mot-clé, un nom, un lieu, un événement ou une source"
+			searchPlaceholder: "Recherchez un mot-clé, un nom, un lieu, un événement ou une source"
 		},
 		content: {
 			title: "Résistance en Belgique",
@@ -50,7 +49,6 @@ const translations = {
 			rightsReserved: "© 2024 Résistance en Belgique. Tous droits réservés."
 		},
 		infoText: "Toutes les données ne sont pas encore en ligne et cela se fera en plusieurs phases sur plusieurs années. Restez à l'écoute pour plus de mises à jour.",
-		updateMessage: "Nous continuerons à mettre à jour les données. <br class='d-block d-md-none'> Restez à l'écoute pour plus de mises à jour.",
 		about: "À propos",
 		faq: "FAQ",
 		data: "Données"
@@ -61,7 +59,7 @@ const translations = {
 		hero: {
 			title: "Verzet in België",
 			description: "Zoek naar leden van het verzet",
-            searchPlaceholder: "Zoek naar een trefwoord, een naam, een plaats, een gebeurtenis of een bron"
+			searchPlaceholder: "Zoek naar een trefwoord, een naam, een plaats, een gebeurtenis of een bron"
 		},
 		content: {
 			title: "Verzet in België",
@@ -78,7 +76,6 @@ const translations = {
 			rightsReserved: "© 2024 Verzet in België. Alle rechten voorbehouden."
 		},
 		infoText: "Nog niet alle gegevens zijn online beschikbaar en dit zal in meerdere fasen over meerdere jaren plaatsvinden. Blijf op de hoogte voor meer updates.",
-		updateMessage: "We blijven de gegevens bijwerken. <br class='d-block d-md-none'> Blijf op de hoogte voor meer updates.",
 		about: "Over",
 		faq: "FAQ",
 		data: "Gegevens"
@@ -89,7 +86,7 @@ const translations = {
 		hero: {
 			title: "Widerstand in Belgien",
 			description: "Suche nach Mitgliedern des Widerstands",
-            searchPlaceholder: "Suchen Sie nach einem Schlüsselwort, einem Namen, einem Ort, einem Ereignis oder einer Quelle"
+			searchPlaceholder: "Suchen Sie nach einem Schlüsselwort, einem Namen, einem Ort, einem Ereignis oder einer Quelle"
 		},
 		content: {
 			title: "Widerstand in Belgien",
@@ -106,7 +103,6 @@ const translations = {
 			rightsReserved: "© 2024 Widerstand in Belgien. Alle Rechte vorbehalten."
 		},
 		infoText: "Noch sind nicht alle Daten online verfügbar, und dies wird in mehreren Phasen über mehrere Jahre hinweg geschehen. Bleiben Sie dran für weitere Updates.",
-		updateMessage: "Wir werden die Daten weiterhin aktualisieren. <br class='d-block d-md-none'> Bleiben Sie dran für weitere Updates.",
 		about: "Über",
 		faq: "FAQ",
 		data: "Daten"
@@ -130,7 +126,7 @@ const loadContentForLanguage = lang => {
 	document.title = getTranslation( lang, 'title' );
 	document.querySelector( 'meta[name="description"]' ).setAttribute( "content", getTranslation( lang, 'metaDescription' ) );
 	document.querySelectorAll( '[data-translate]' ).forEach( el => el.innerHTML = getTranslation( lang, el.getAttribute( 'data-translate' ) ) );
-    document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
+	document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
 
 	const { flag, name } = languageNames[lang];
 	document.getElementById( 'languageDropdown' ).innerHTML = `<img src="${ flag }" alt="${ name }" width="20"> ${ name }`;

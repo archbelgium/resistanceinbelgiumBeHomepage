@@ -3,8 +3,6 @@ let currentFocus = -1;
 
 const searchInput = document.getElementById( 'search' );
 const resultsDiv = document.getElementById( 'results' );
-const resultsContent = document.getElementById( 'results-content' );
-const infoMessage = document.getElementById( 'info-message' );
 
 document.addEventListener( 'click', ( event ) => {
 	if( !resultsDiv.contains( event.target ) && !searchInput.contains( event.target ) ) {
@@ -54,7 +52,6 @@ async function search() {
 	}
 
 	try {
-		// Get the language from the URL or default to 'en'
 		const urlParams = new URLSearchParams( window.location.search );
 		const language = urlParams.get( 'lang' ) || 'en';
 
@@ -63,13 +60,13 @@ async function search() {
 		const entities = await getEntities( entityIds );
 
 		const results = searchData.search.map( result => {
-			const entity = entities.entities[ result.id ];
+			const entity = entities.entities[result.id];
 			const dateOfBirth = isPerson( entity ) ? getDateOfBirth( entity ) : null;
 			return { ...result, dateOfBirth };
 		} );
 
 		displayResults( results );
-	} catch ( error ) {
+	} catch( error ) {
 		console.error( 'Error fetching data:', error );
 	}
 }
@@ -97,12 +94,11 @@ function getDateOfBirth( entity ) {
 }
 
 function displayResults( results ) {
-	resultsContent.innerHTML = '';
+	resultsDiv.innerHTML = '';
 	currentFocus = -1;
 
 	if( !results.length ) {
 		resultsDiv.classList.remove( 'show' );
-		infoMessage.style.display = 'none';
 		return;
 	}
 
@@ -115,26 +111,24 @@ function displayResults( results ) {
 
 		const label = document.createElement( 'div' );
 		label.classList.add( 'result-label' );
-		label.textContent = result.label + ( result.dateOfBirth ? ` (${ result.dateOfBirth })` : '' );
+		label.textContent = result.label + (result.dateOfBirth ? ` (${ result.dateOfBirth })` : '');
 
 		const description = document.createElement( 'div' );
 		description.classList.add( 'result-description', 'small' );
 		description.textContent = result.description;
 
 		a.append( label, description );
-		resultsContent.appendChild( a );
+		resultsDiv.appendChild( a );
 
 		a.addEventListener( 'mouseover', () => {
 			currentFocus = index;
-			addActive( resultsContent.getElementsByClassName( 'dropdown-item' ) );
+			addActive( resultsDiv.getElementsByClassName( 'dropdown-item' ) );
 		} );
 	} );
-
-	infoMessage.style.display = 'block';
 }
 
 function showResultsIfAny() {
-	if( resultsContent.innerHTML.trim() ) {
+	if( resultsDiv.innerHTML.trim() ) {
 		resultsDiv.classList.add( 'show' );
 	}
 }
@@ -142,10 +136,6 @@ function showResultsIfAny() {
 function changeLanguage( lang ) {
 	window.location.href = `${ window.location.pathname }?lang=${ lang }`;
 }
-
-resultsDiv.addEventListener( 'scroll', () => {
-	infoMessage.style.paddingBottom = (resultsDiv.scrollHeight - resultsDiv.scrollTop === resultsDiv.clientHeight) ? '0' : '20px';
-} );
 
 searchInput.addEventListener( 'input', debounceSearch );
 searchInput.addEventListener( 'focus', showResultsIfAny );
