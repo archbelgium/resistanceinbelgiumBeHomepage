@@ -119,3 +119,15 @@ ul {
 .language-selector .dropdown-item:hover {
 	background-color: var(--link-hover-bg-color);
 }
+
+
+
+@media (max-width: 768px) {
+	.language-selector/*, .navbar-nav*/ {
+		position: absolute !important;
+	}
+
+	#navbar-items {
+		margin-left: 25px !important;
+	}
+}
