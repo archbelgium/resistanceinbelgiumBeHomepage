@@ -74,11 +74,13 @@
 		}
 
 		.info-container {
-			padding-right: 100px;
-			padding-left: 100px;
+			padding-right: 20%;
+			padding-left: 20%;
 		}
 
 		.info-text {
+			display: flex;
+			gap: 8px;
 			background-color: var(--hero-bg-color);
 			padding: 1rem;
 			border-radius: 0.5rem;
@@ -119,21 +121,21 @@
 
 		.navbar-toggler:focus {
 			border: 2px solid white;
-            box-shadow: none;
+			box-shadow: none;
 		}
 
 		.navbar-toggler-icon {
 			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 		}
 
-        @media (max-width: 768px) {
+		@media (max-width: 768px) {
 			.navbar-brand {
 				margin-top: 0.5rem;
-				margin-left:0;
+				margin-left: 0;
 
-                img {
-                    height: 80px !important;
-                }
+				img {
+					height: 80px !important;
+				}
 			}
 		}
     </style>
@@ -195,10 +197,10 @@
             <div id="results" class="dropdown-menu"></div>
         </div>
         <div class="text-center info-container">
-            <small class="info-text">
+            <div class="info-text">
                 <img src="images/icons/white-info-icon.svg" height="22" width="22" alt="" class="mb-1 pr-5">
                 <span data-translate="infoText"></span>
-            </small>
+            </div>
         </div>
     </div>
 </div>
