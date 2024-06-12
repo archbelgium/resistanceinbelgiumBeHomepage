@@ -7,6 +7,10 @@
     <meta name="keywords" content="Belgian Resistance, World War II, Belgium history, resistance movements">
     <title id="page-title"></title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUZiZQ.woff2" crossorigin as="font" type="font/woff2">
+    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" crossorigin as="font" type="font/woff2">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
@@ -31,6 +35,24 @@
 
     <script src="lang.js"></script>
     <style>
+        @font-face {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local('Oswald Bold'), url(https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUZiZQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Roboto'), url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
 		:root {
 			--primary-bg-color: rgba(40, 92, 62, 0.06);
 			--hero-bg-color: rgba(28, 41, 31, 0.8);
@@ -44,6 +66,7 @@
 			--footer-text-color: #ffffff;
 			--language-selector-border-color: #eedfdfff;
 			--link-hover-bg-color: rgba(40, 92, 62, 0.05);
+            --bs-body-font-family: "Roboto", sans-serif;
 		}
 
 		body {
@@ -142,11 +165,15 @@
 				}
 			}
 		}
+
+        .font-oswald {
+            font-family: "Oswald", sans-serif;
+        }
     </style>
 </head>
 <body class="min-vh-100 d-flex flex-column bg-light">
 <div class="hero-section">
-    <nav class="navbar navbar-expand-lg w-100 fs-5">
+    <nav class="navbar navbar-expand-lg w-100 fs-5 font-oswald">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logos/brand-logo-white.svg" height="100" alt="Logo" />
@@ -191,7 +218,7 @@
         </div>
     </nav>
     <div class="container hero-content">
-        <h1 class="display-3 fw-bold text-uppercase" data-translate="hero.title"></h1>
+        <h1 class="display-3 fw-bold text-uppercase font-oswald" data-translate="hero.title"></h1>
         <p class="lead fw-bolder" data-translate="hero.description"></p>
         <div class="search-bar input-group mb-3 text-ce">
             <input type="search" class="form-control" id="search" oninput="debounceSearch()" onfocus="showResultsIfAny()" autocomplete="off" data-translate-placeholder="hero.searchPlaceholder" />
@@ -212,7 +239,7 @@
 <section class="section section-ethics container my-5">
     <div class="section-content">
         <div class="row">
-            <h3 class="display-5 fw-medium mb-4 text-uppercase" data-translate="content.title"></h3>
+            <h3 class="display-5 fw-medium mb-4 text-uppercase font-oswald" data-translate="content.title"></h3>
             <p class="paragraph" data-translate="content.paragraph1"></p>
             <p class="paragraph" data-translate="content.paragraph2"></p>
             <p class="paragraph" data-translate="content.paragraph3"></p>
