@@ -24,7 +24,12 @@ const translations = {
 		infoText: "All data is not yet online and this will take place in several phases over several years. Stay tuned for more updates.",
 		about: "About",
 		faq: "FAQ",
-		data: "Data"
+		data: "Data",
+		menuLinks: {
+			about: 'https://data.arch.be/wiki/About',
+			faq: 'https://data.arch.be/wiki/FAQ',
+			data: '#'
+		}
 	},
 	fr: {
 		title: "Résistance en Belgique",
@@ -51,7 +56,12 @@ const translations = {
 		infoText: "Toutes les données ne sont pas encore en ligne et cela se fera en plusieurs phases sur plusieurs années. Restez à l'écoute pour plus de mises à jour.",
 		about: "À propos",
 		faq: "FAQ",
-		data: "Données"
+		data: "Données",
+		menuLinks: {
+			about: 'https://data.arch.be/wiki/%C3%80_propos',
+			faq: 'https://data.arch.be/wiki/Foire_Aux_Questions',
+			data: '#'
+		}
 	},
 	nl: {
 		title: "Verzet in België",
@@ -78,7 +88,12 @@ const translations = {
 		infoText: "Nog niet alle gegevens zijn online beschikbaar en dit zal in meerdere fasen over meerdere jaren plaatsvinden. Blijf op de hoogte voor meer updates.",
 		about: "Over",
 		faq: "FAQ",
-		data: "Gegevens"
+		data: "Gegevens",
+		menuLinks: {
+			about: 'https://data.arch.be/wiki/Over_ons',
+			faq: 'https://data.arch.be/wiki/Vraagbaak',
+			data: '#'
+		},
 	},
 	de: {
 		title: "Widerstand in Belgien",
@@ -105,7 +120,12 @@ const translations = {
 		infoText: "Noch sind nicht alle Daten online verfügbar, und dies wird in mehreren Phasen über mehrere Jahre hinweg geschehen. Bleiben Sie dran für weitere Updates.",
 		about: "Über",
 		faq: "FAQ",
-		data: "Daten"
+		data: "Daten",
+		menuLinks: {
+			about: 'https://data.arch.be/wiki/%C3%9Cber_uns',
+			faq: 'https://data.arch.be/wiki/H%C3%A4ufig_gestellte_Fragen',
+			data: '#'
+		}
 	}
 };
 
@@ -127,6 +147,7 @@ const loadContentForLanguage = lang => {
 	document.querySelector( 'meta[name="description"]' ).setAttribute( "content", getTranslation( lang, 'metaDescription' ) );
 	document.querySelectorAll( '[data-translate]' ).forEach( el => el.innerHTML = getTranslation( lang, el.getAttribute( 'data-translate' ) ) );
 	document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
+	document.querySelectorAll( '[data-translate-href]' ).forEach( el => el.href = getTranslation( lang, el.getAttribute( 'data-translate-href' ) ) );
 
 	const { flag, name } = languageNames[lang];
 	document.getElementById( 'languageDropdown' ).innerHTML = `<img src="${ flag }" alt="${ name }" width="20"> ${ name }`;
