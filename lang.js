@@ -3,7 +3,7 @@ const translations = {
 		title: "Resistance in Belgium",
 		metaDescription: "Learn about the Belgian Resistance during World War II. Explore the stories of bravery and sacrifice that contributed to the liberation of Belgium.",
 		hero: {
-			title: "Resistance in Belgium",
+			title: "SEARCH FOR MEMBERS OF THE <br> RESISTANCE IN BELGIUM",
 			description: "Search for members of the resistance",
 			searchPlaceholder: "Search for a keyword, a name, a place, an event, or a source"
 		},
@@ -35,7 +35,7 @@ const translations = {
 		title: "Résistance en Belgique",
 		metaDescription: "Découvrez la résistance belge pendant la Seconde Guerre mondiale. Explorez les histoires de bravoure et de sacrifice qui ont contribué à la libération de la Belgique.",
 		hero: {
-			title: "Résistance en Belgique",
+			title: "Recherchez des Membres de la </br> Résistance en Belgique",
 			description: "Rechercher des membres de la résistance",
 			searchPlaceholder: "Recherchez un mot-clé, un nom, un lieu, un événement ou une source"
 		},
@@ -67,7 +67,7 @@ const translations = {
 		title: "Verzet in België",
 		metaDescription: "Lees meer over het Belgische verzet tijdens de Tweede Wereldoorlog. Ontdek de verhalen van moed en opoffering die hebben bijgedragen aan de bevrijding van België.",
 		hero: {
-			title: "Verzet in België",
+			title: "Zoek naar Leden van het </br> Verzet in België",
 			description: "Zoek naar leden van het verzet",
 			searchPlaceholder: "Zoek naar een trefwoord, een naam, een plaats, een gebeurtenis of een bron"
 		},
@@ -99,7 +99,7 @@ const translations = {
 		title: "Widerstand in Belgien",
 		metaDescription: "Erfahren Sie mehr über den belgischen Widerstand während des Zweiten Weltkriegs. Entdecken Sie Geschichten von Tapferkeit und Opferbereitschaft, die zur Befreiung Belgiens beigetragen haben.",
 		hero: {
-			title: "Widerstand in Belgien",
+			title: "Suchen Sie nach Mitgliedern des </br> Widerstands in Belgien",
 			description: "Suche nach Mitgliedern des Widerstands",
 			searchPlaceholder: "Suchen Sie nach einem Schlüsselwort, einem Namen, einem Ort, einem Ereignis oder einer Quelle"
 		},
