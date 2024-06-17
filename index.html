@@ -148,11 +148,6 @@
 			}
 		}
 
-		.navbar-brand {
-			margin-top: 2.5rem;
-			margin-left: 1.5rem;
-		}
-
 		.hero-content {
 			margin-top: 5vh;
 		}
@@ -215,20 +210,9 @@
 			background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="white" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
 		}
 
-		@media (max-width: 768px) {
-			.navbar-brand {
-				margin-top: 0.5rem;
-				margin-left: 0;
-
-				img {
-					height: 80px !important;
-				}
-			}
-		}
-
-		.font-oswald {
-			font-family: "Oswald", sans-serif;
-		}
+        .font-oswald {
+            font-family: "Oswald", sans-serif;
+        }
 
         .section-content {
             max-width: 900px;
@@ -237,8 +221,47 @@
     </style>
 </head>
 <body class="min-vh-100 d-flex flex-column bg-light">
-<nav class="navbar navbar-expand-lg w-100 fs-5 font-oswald" style="height: 80px;">
-    <!--WIP: https://github.com/ProfessionalWiki/StateArchivesHomepage/issues/46 -->
+<nav class="navbar navbar-expand-lg w-100 fs-5 font-oswald">
+    <div class="container-fluid">
+        <img src="images/logos/brand-logo.svg" height="60" alt="Logo" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse float-end" id="navbar-items">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <ul class="navbar-nav d-sm-flex flex-row fs-6 gap-4 gap-sm-2 pl-5 fw-bolder">
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#" data-translate="about" data-translate-href="menuLinks.about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase" href="#" data-translate="faq" data-translate-href="menuLinks.faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase mr-5" href="#" data-translate="data" data-translate-href="menuLinks.data">Data</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-medium text-uppercase" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span data-translate="language">English</span>
+                    </a>
+                    <ul class="dropdown-menu language-selector" aria-labelledby="languageDropdown">
+                        <li class="dropdown-item" onclick="changeLanguage('fr')">
+                            <img src="images/icons/fr.svg" alt="French" width="20" height="20"> Français
+                        </li>
+                        <li class="dropdown-item" onclick="changeLanguage('nl')">
+                            <img src="images/icons/nl.svg" alt="Dutch" width="20" height="20"> Nederlands
+                        </li>
+                        <li class="dropdown-item" onclick="changeLanguage('de')">
+                            <img src="images/icons/de.svg" alt="German" width="20" height="20"> Deutsch
+                        </li>
+                        <li class="dropdown-item" onclick="changeLanguage('en')">
+                            <img src="images/icons/en.png" alt="English" width="20" height="20"> English
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 <div class="hero-section">
     <div class="overlay"></div>
