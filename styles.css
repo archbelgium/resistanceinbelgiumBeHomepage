@@ -2,10 +2,6 @@
 	top: 100%;
 }
 
-.nav-link {
-	color: white !important;
-}
-
 #results {
 	.dropdown-item {
 		border-bottom: 1px solid var(--dropdown-border-color);
