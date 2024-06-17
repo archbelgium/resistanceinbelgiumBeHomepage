@@ -153,13 +153,6 @@ const translations = {
 	}
 };
 
-const languageNames = {
-	en: { name: "English", flag: "images/icons/en.png" },
-	fr: { name: "Français", flag: "images/icons/fr.svg" },
-	nl: { name: "Nederlands", flag: "images/icons/nl.svg" },
-	de: { name: "Deutsch", flag: "images/icons/de.svg" }
-};
-
 const getTranslation = ( lang, key ) => key.split( '.' ).reduce( ( obj, i ) => (obj ? obj[i] : null), translations[lang] ) || key;
 
 const loadContentForLanguage = lang => {
@@ -175,8 +168,7 @@ const loadContentForLanguage = lang => {
 	document.querySelectorAll( '[data-translate-alt]' ).forEach( el => el.alt = getTranslation( lang, el.getAttribute( 'data-translate-alt' ) ) );
 	document.querySelectorAll( '[data-translate-title]' ).forEach( el => el.title = getTranslation( lang, el.getAttribute( 'data-translate-title' ) ) );
 
-	const { flag, name } = languageNames[lang];
-	document.getElementById( 'languageDropdown' ).innerHTML = `<img src="${ flag }" alt="${ name }" width="20"> ${ name }`;
+	document.querySelector( `.nav-link[data-lang="${ lang }"]` ).classList.add( 'text-decoration-underline' );
 };
 
 document.addEventListener( 'DOMContentLoaded', () => {

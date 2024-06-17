@@ -82,6 +82,11 @@
 			--bs-navbar-toggler-focus-width: 2px;
 		}
 
+		.lang-links {
+			--bs-navbar-color: #24569f;
+			--bs-navbar-hover-color: #24569f;
+		}
+
 		.hero-section {
 			background: black url('images/hero-section.jpg') no-repeat center center;
 			background-size: cover;
@@ -223,10 +228,8 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse float-end" id="navbar-items">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            </ul>
-            <ul class="navbar-nav d-sm-flex flex-row fs-6 gap-4 gap-sm-2 pl-5 fw-bolder">
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="navbar-nav d-inline-flex flex-row fs-6 gap-4 gap-lg-2 pl-5 fw-bolder me-3 me-lg-2 ms-auto">
                 <li class="nav-item">
                     <a class="nav-link text-uppercase" href="#" data-translate="about" data-translate-href="menuLinks.about">About</a>
                 </li>
@@ -236,24 +239,28 @@
                 <li class="nav-item">
                     <a class="nav-link text-uppercase mr-5" href="#" data-translate="data" data-translate-href="menuLinks.data">Data</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-medium text-uppercase" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span data-translate="language">English</span>
-                    </a>
-                    <ul class="dropdown-menu language-selector" aria-labelledby="languageDropdown">
-                        <li class="dropdown-item" onclick="changeLanguage('fr')">
-                            <img src="images/icons/fr.svg" alt="French" width="20" height="20"> Français
-                        </li>
-                        <li class="dropdown-item" onclick="changeLanguage('nl')">
-                            <img src="images/icons/nl.svg" alt="Dutch" width="20" height="20"> Nederlands
-                        </li>
-                        <li class="dropdown-item" onclick="changeLanguage('de')">
-                            <img src="images/icons/de.svg" alt="German" width="20" height="20"> Deutsch
-                        </li>
-                        <li class="dropdown-item" onclick="changeLanguage('en')">
-                            <img src="images/icons/en.png" alt="English" width="20" height="20"> English
-                        </li>
-                    </ul>
+            </ul>
+            <ul class="navbar-nav d-inline-flex flex-row fs-6 gap-2 gap-lg-0 pl-5 fw-bolder ms-auto ms-lg-0 lang-links">
+                <li class="nav-item">
+                    <a class="nav-link fw-medium text-uppercase" href="#" data-lang='en' onclick="changeLanguage('en')">EN</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-0">/</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium text-uppercase" href="#" data-lang='fr' onclick="changeLanguage('fr')">FR</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-0">/</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium text-uppercase" href="#" data-lang='nl' onclick="changeLanguage('nl')">NL</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-0">/</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-medium text-uppercase" href="#" data-lang='de' onclick="changeLanguage('de')">DE</a>
                 </li>
             </ul>
         </div>
