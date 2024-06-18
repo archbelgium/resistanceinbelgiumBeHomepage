@@ -62,10 +62,12 @@ ul {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 10%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .footer {
-	padding-top: 40px;
+    border-top: 1px solid #d3d3d3;
 }
 
 .footer .contact, .footer .follow {
