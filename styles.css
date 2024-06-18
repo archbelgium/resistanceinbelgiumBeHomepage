@@ -83,15 +83,11 @@ ul {
 	text-decoration: underline;
 }
 
+.footer-logo {
+    height: 50px;
+}
+
 @media (min-width: 768px) {
-	.footer-logo {
-		height: 120px;
-	}
-
-	.footer-logo-4 {
-		height: 80px;
-	}
-
 	.footer-content {
 		flex-wrap: nowrap;
 	}
@@ -105,7 +101,6 @@ ul {
 	}
 
 	.footer-logo {
-		height: 80px;
 		margin-bottom: 20px;
 	}
 }
