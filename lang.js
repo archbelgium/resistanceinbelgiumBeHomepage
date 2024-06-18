@@ -29,6 +29,12 @@ const translations = {
 			about: 'https://data.arch.be/wiki/About',
 			faq: 'https://data.arch.be/wiki/FAQ',
 			data: '#'
+		},
+		logos: {
+			arch: "State Archives of Belgium",
+			belspo: "Belspo - Belgian Science Policy",
+			cegesoma: "CegeSoma.be",
+			belgium: "Belgium.be"
 		}
 	},
 	fr: {
@@ -61,6 +67,12 @@ const translations = {
 			about: 'https://data.arch.be/wiki/%C3%80_propos',
 			faq: 'https://data.arch.be/wiki/Foire_Aux_Questions',
 			data: '#'
+		},
+		logos: {
+			arch: "Archives de l'État en Belgique",
+			belspo: "Belspo - Politique scientifique fédérale",
+			cegesoma: "CegeSoma.be",
+			belgium: "Belgium.be"
 		}
 	},
 	nl: {
@@ -94,6 +106,12 @@ const translations = {
 			faq: 'https://data.arch.be/wiki/Vraagbaak',
 			data: '#'
 		},
+		logos: {
+			arch: "Rijksarchief in België",
+			belspo: "Belspo - Federaal Wetenschapsbeleid",
+			cegesoma: "CegeSoma.be",
+			belgium: "Belgium.be"
+		}
 	},
 	de: {
 		title: "Widerstand in Belgien",
@@ -125,6 +143,12 @@ const translations = {
 			about: 'https://data.arch.be/wiki/%C3%9Cber_uns',
 			faq: 'https://data.arch.be/wiki/H%C3%A4ufig_gestellte_Fragen',
 			data: '#'
+		},
+		logos: {
+			arch: "Belgisches Staatsarchiv",
+			belspo: "Belspo - Belgische Wissenschaftspolitik",
+			cegesoma: "CegeSoma.be",
+			belgium: "Belgium.be"
 		}
 	}
 };
@@ -148,6 +172,8 @@ const loadContentForLanguage = lang => {
 	document.querySelectorAll( '[data-translate]' ).forEach( el => el.innerHTML = getTranslation( lang, el.getAttribute( 'data-translate' ) ) );
 	document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
 	document.querySelectorAll( '[data-translate-href]' ).forEach( el => el.href = getTranslation( lang, el.getAttribute( 'data-translate-href' ) ) );
+	document.querySelectorAll( '[data-translate-alt]' ).forEach( el => el.alt = getTranslation( lang, el.getAttribute( 'data-translate-alt' ) ) );
+	document.querySelectorAll( '[data-translate-title]' ).forEach( el => el.title = getTranslation( lang, el.getAttribute( 'data-translate-title' ) ) );
 
 	const { flag, name } = languageNames[lang];
 	document.getElementById( 'languageDropdown' ).innerHTML = `<img src="${ flag }" alt="${ name }" width="20"> ${ name }`;
