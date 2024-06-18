@@ -62,12 +62,12 @@ ul {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 10%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .footer {
-	background-color: var(--footer-bg-color);
-	padding-top: 40px;
-	color: var(--footer-text-color);
+    border-top: 1px solid #d3d3d3;
 }
 
 .footer .contact, .footer .follow {
@@ -83,15 +83,16 @@ ul {
 	text-decoration: underline;
 }
 
+.footer-logo {
+    height: 50px;
+}
+
+.footer .copyright {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
 @media (min-width: 768px) {
-	.footer-logo {
-		height: 120px;
-	}
-
-	.footer-logo-4 {
-		height: 80px;
-	}
-
 	.footer-content {
 		flex-wrap: nowrap;
 	}
@@ -105,7 +106,6 @@ ul {
 	}
 
 	.footer-logo {
-		height: 80px;
 		margin-bottom: 20px;
 	}
 }

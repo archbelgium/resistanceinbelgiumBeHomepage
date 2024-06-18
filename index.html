@@ -62,7 +62,7 @@
 			--scrollbar-thumb-color: #285c3ee3;
 			--scrollbar-track-color: rgba(40, 92, 62, 0.06);
 			--dropdown-border-color: #285c3e1f;
-			--footer-bg-color: #1c291f;
+			--footer-bg-color: #158f68;
 			--footer-text-color: #ffffff;
 			--language-selector-border-color: #eedfdfff;
 			--link-hover-bg-color: rgba(40, 92, 62, 0.05);
@@ -297,35 +297,38 @@
 
 <footer class="footer mt-auto">
     <div class="container">
-        <div class="footer-content mb-5 d-flex flex-wrap justify-content-center">
-            <img src="images/logos/logo1.png" class="footer-logo m-2" alt="Logo 1">
-            <img src="images/logos/logo2.png" class="footer-logo m-2" alt="Logo 2">
-            <img src="images/logos/logo3-white.png" class="footer-logo m-2" alt="Logo 3">
-            <img src="images/logos/logo-4.png" class="footer-logo footer-logo-4 m-2" alt="Logo 4">
-        </div>
-        <div class="row justify-content-center text-center pt-2">
-            <div class="col-12 col-md-4 mb-3">
-                <p class="fw-bold" data-translate="footer.contact"></p>
-                <p>statearchive.org@gmail.com</p>
+        <div class="footer-content d-flex flex-wrap justify-content-between py-4">
+            <div class="footer-logos d-flex flex-column flex-sm-row align-items-center">
+                <a href="http://www.arch.be/" target="_blank">
+                    <img src="images/logos/logo1.png" class="footer-logo mx-3 my-2" data-translate-alt="logos.arch" data-translate-title="logos.arch">
+                </a>
+                <a href="https://www.belspo.be/" target="_blank">
+                    <img src="images/logos/logo2.png" class="footer-logo mx-3 my-2" data-translate-alt="logos.belspo" data-translate-title="logos.belspo">
+                </a>
+                <a href="https://cegesoma.be/" target="_blank">
+                    <img src="images/logos/logo3.png" class="footer-logo mx-3 my-2" data-translate-alt="logos.cegesoma" data-translate-title="logos.cegesoma">
+                </a>
+                <a href="https://www.belgium.be/" target="_blank">
+                    <img src="images/logos/logo4.png" class="footer-logo mx-3 my-2" data-translate-alt="logos.belgium" data-translate-title="logos.belgium">
+                </a>
             </div>
-            <div class="col-12 col-md-4 mb-3">
-                <p class="fw-bold" data-translate="footer.followUs"></p>
+
+            <div class="social-links">
+                <p class="fw-bold mb-2" data-translate="footer.followUs"></p>
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="#">
-                        <img src="images/icons/twitter.svg" height="24" width="24" alt="Twitter" />
+                    <a href="https://www.facebook.com/archives.etat">
+                        <img src="images/icons/facebook.svg" height="30" width="30" alt="Facebook" />
                     </a>
-                    <a href="#">
-                        <img src="images/icons/instagram.svg" height="24" width="24" alt="Instagram" />
+                    <a href="https://www.youtube.com/channel/UCe2Ryt6ezQTZHCZmg4ZMQtQ/" target="_blank">
+                        <img src="images/icons/youtube.svg" height="30" width="30" alt="YouTube" />
                     </a>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-3 text-center">
-                <a href="#" class="btn btn-outline-light mb-2" data-translate="footer.ethics"></a>
-                <a href="#" class="btn btn-outline-light mb-2" data-translate="footer.support"></a>
-            </div>
         </div>
-        <div class="text-center mt-4">
-            <p data-translate="footer.rightsReserved"></p>
+    </div>
+    <div class="copyright">
+        <div class="text-center p-2">
+            <p class="m-0" data-translate="footer.rightsReserved"></p>
         </div>
     </div>
 </footer>
