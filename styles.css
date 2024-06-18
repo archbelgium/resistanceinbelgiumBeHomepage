@@ -65,9 +65,7 @@ ul {
 }
 
 .footer {
-	background-color: var(--footer-bg-color);
 	padding-top: 40px;
-	color: var(--footer-text-color);
 }
 
 .footer .contact, .footer .follow {
@@ -85,6 +83,11 @@ ul {
 
 .footer-logo {
     height: 50px;
+}
+
+.footer .copyright {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
 }
 
 @media (min-width: 768px) {
