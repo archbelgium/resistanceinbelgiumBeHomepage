@@ -168,7 +168,7 @@ const loadContentForLanguage = lang => {
 	document.querySelectorAll( '[data-translate-alt]' ).forEach( el => el.alt = getTranslation( lang, el.getAttribute( 'data-translate-alt' ) ) );
 	document.querySelectorAll( '[data-translate-title]' ).forEach( el => el.title = getTranslation( lang, el.getAttribute( 'data-translate-title' ) ) );
 
-	document.querySelector( `.nav-link[data-lang="${ lang }"]` ).classList.add( 'text-decoration-underline' );
+	document.querySelector( `.nav-link[data-lang="${ lang }"]` ).classList.add( 'fw-bold' );
 };
 
 document.addEventListener( 'DOMContentLoaded', () => {
