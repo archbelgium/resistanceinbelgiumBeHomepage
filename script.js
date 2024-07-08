@@ -13,13 +13,20 @@ document.addEventListener( 'click', ( event ) => {
 searchInput.addEventListener( 'keydown', ( e ) => {
 	const items = resultsDiv.getElementsByClassName( 'dropdown-item' );
 
-	if( resultsDiv.classList.contains( 'show' ) ) {
+	if( e.key === 'Enter' ) {
+		e.preventDefault();
+		if( currentFocus > -1 && items[currentFocus] ) {
+			window.location.href = items[currentFocus].getAttribute( 'href' );
+		} else {
+			const searchTerm = searchInput.value.trim();
+			if( searchTerm ) {
+				window.location.href = `https://data.arch.be/w/index.php?search=${ encodeURIComponent( searchTerm ) }&title=Special:Search`;
+			}
+		}
+	} else if( resultsDiv.classList.contains( 'show' ) ) {
 		if( e.key === 'ArrowDown' || e.key === 'ArrowUp' ) {
 			currentFocus = (e.key === 'ArrowDown') ? currentFocus + 1 : currentFocus - 1;
 			addActive( items );
-			e.preventDefault();
-		} else if( e.key === 'Enter' && currentFocus > -1 && items[currentFocus] ) {
-			window.location.href = items[currentFocus].getAttribute( 'href' );
 			e.preventDefault();
 		}
 	}
