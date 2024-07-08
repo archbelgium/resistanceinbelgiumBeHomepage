@@ -132,6 +132,11 @@ function displayResults( results ) {
 			addActive( resultsDiv.getElementsByClassName( 'dropdown-item' ) );
 		} );
 	} );
+
+	if( results.length === 1 ) {
+		currentFocus = 0;
+		addActive( resultsDiv.getElementsByClassName( 'dropdown-item' ) );
+	}
 }
 
 function showResultsIfAny() {
