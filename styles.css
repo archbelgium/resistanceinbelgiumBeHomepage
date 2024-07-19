@@ -58,12 +58,12 @@
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 10%;
-    max-width: 900px;
-    margin: 0 auto;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 .footer {
-    border-top: 1px solid #d3d3d3;
+	border-top: 1px solid #d3d3d3;
 }
 
 .footer .contact, .footer .follow {
@@ -80,12 +80,27 @@
 }
 
 .footer-logo {
-    height: 50px;
+	height: 50px;
 }
 
-.footer .copyright {
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+.footer-bottom {
+	background-color: var(--footer-bg-color);
+	color: var(--footer-text-color);
+}
+
+.footer-bottom-content {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.footer-link {
+	color: var(--footer-text-color);
+	text-decoration: none;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
 }
 
 @media (min-width: 768px) {
