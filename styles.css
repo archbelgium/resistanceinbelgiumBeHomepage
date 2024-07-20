@@ -91,7 +91,6 @@
 .footer-bottom-content {
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 0 15px;
 }
 
 .footer-link {
@@ -101,6 +100,15 @@
 
 .footer-link:hover {
 	text-decoration: underline;
+}
+
+.pw-logo {
+	opacity: 50%;
+	transition: opacity 0.3s ease;
+}
+
+.pw-logo:hover {
+	opacity: 100%;
 }
 
 @media (min-width: 768px) {
@@ -118,6 +126,16 @@
 
 	.footer-logo {
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-bottom-content {
+		text-align: center;
+	}
+
+	.copyright-text {
+		margin-bottom: 10px;
 	}
 }
 
@@ -149,7 +167,6 @@
 .language-selector .dropdown-item:hover {
 	background-color: var(--link-hover-bg-color);
 }
-
 
 @media (max-width: 992px) {
 	#navbar-items {
