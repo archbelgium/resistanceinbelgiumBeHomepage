@@ -33,6 +33,28 @@
     <link rel="alternate" hreflang="nl" href="https://data.arch.be/?lang=nl">
     <link rel="alternate" hreflang="de" href="https://data.arch.be/?lang=de">
 
+    <script>
+		function detectLanguageAndRedirect() {
+			const supportedLanguages = [ 'en', 'fr', 'nl', 'de' ];
+			const currentLanguage = ( new URLSearchParams( window.location.search ) ).get( 'lang' );
+
+			if ( currentLanguage !== null && supportedLanguages.includes( currentLanguage ) ) {
+				return;
+			}
+
+			const userLanguage = navigator.language.split( '-' )[0];
+
+			if ( currentLanguage === null && userLanguage === 'en' ) {
+				return;
+            }
+
+			const detectedLanguage = supportedLanguages.includes( userLanguage ) ? userLanguage : 'en';
+
+            window.location.href = `${ window.location.pathname }?lang=${ detectedLanguage }`;
+		}
+		detectLanguageAndRedirect();
+    </script>
+
     <script src="lang.js"></script>
     <style>
         @font-face {
