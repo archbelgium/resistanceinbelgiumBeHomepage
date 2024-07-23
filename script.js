@@ -149,5 +149,16 @@ function changeLanguage( lang ) {
 	window.location.href = `${ window.location.pathname }?lang=${ lang }`;
 }
 
+document.addEventListener( 'DOMContentLoaded', function() {
+	const languageLinks = document.querySelectorAll( '.nav-link[data-lang]' );
+
+	languageLinks.forEach( link => {
+		link.addEventListener( 'click', function( e ) {
+			e.preventDefault();
+			changeLanguage( this.getAttribute( 'data-lang' ) );
+		});
+	});
+});
+
 searchInput.addEventListener( 'input', debounceSearch );
 searchInput.addEventListener( 'focus', showResultsIfAny );
