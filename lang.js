@@ -196,10 +196,5 @@ const loadContentForLanguage = lang => {
 };
 
 document.addEventListener( 'DOMContentLoaded', () => {
-	let lang = new URLSearchParams( window.location.search ).get( 'lang' ) || 'en';
-	if( !translations[lang] ) {
-		detectLanguageAndRedirect();
-	} else {
-		loadContentForLanguage( lang );
-	}
+	loadContentForLanguage( new URLSearchParams( window.location.search ).get( 'lang' ) || 'en' );
 } );
