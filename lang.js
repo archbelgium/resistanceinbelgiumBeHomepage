@@ -32,8 +32,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Data",
 		menuLinks: {
-			about: 'https://data.arch.be/wiki/About',
-			faq: 'https://data.arch.be/wiki/FAQ',
+			about: '/wiki/About',
+			faq: '/wiki/FAQ',
 			data: '#'
 		},
 		logos: {
@@ -76,8 +76,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Données",
 		menuLinks: {
-			about: 'https://data.arch.be/wiki/%C3%80_propos',
-			faq: 'https://data.arch.be/wiki/Foire_Aux_Questions',
+			about: '/wiki/%C3%80_propos',
+			faq: '/wiki/Foire_Aux_Questions',
 			data: '#'
 		},
 		logos: {
@@ -120,8 +120,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Gegevens",
 		menuLinks: {
-			about: 'https://data.arch.be/wiki/Over_ons',
-			faq: 'https://data.arch.be/wiki/Vraagbaak',
+			about: '/wiki/Over_ons',
+			faq: '/wiki/Vraagbaak',
 			data: '#'
 		},
 		logos: {
@@ -164,8 +164,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Daten",
 		menuLinks: {
-			about: 'https://data.arch.be/wiki/%C3%9Cber_uns',
-			faq: 'https://data.arch.be/wiki/H%C3%A4ufig_gestellte_Fragen',
+			about: '/wiki/%C3%9Cber_uns',
+			faq: '/wiki/H%C3%A4ufig_gestellte_Fragen',
 			data: '#'
 		},
 		logos: {

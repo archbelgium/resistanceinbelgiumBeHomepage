@@ -4,6 +4,8 @@ let currentFocus = -1;
 const searchInput = document.getElementById( 'search' );
 const resultsDiv = document.getElementById( 'results' );
 
+const baseUrl = '';
+
 document.addEventListener( 'click', ( event ) => {
 	if( !resultsDiv.contains( event.target ) && !searchInput.contains( event.target ) ) {
 		resultsDiv.classList.remove( 'show' );
@@ -20,7 +22,7 @@ searchInput.addEventListener( 'keydown', ( e ) => {
 		} else {
 			const searchTerm = searchInput.value.trim();
 			if( searchTerm ) {
-				window.location.href = `https://data.arch.be/w/index.php?search=${ encodeURIComponent( searchTerm ) }&title=Special:Search`;
+				window.location.href = baseUrl + `/w/index.php?search=${ encodeURIComponent( searchTerm ) }&title=Special:Search`;
 			}
 		}
 	} else if( resultsDiv.classList.contains( 'show' ) ) {
@@ -79,13 +81,13 @@ async function search() {
 }
 
 async function searchEntities( searchTerm, language ) {
-	const url = `https://data.arch.be/w/api.php?action=wbsearchentities&search=${ encodeURIComponent( searchTerm ) }&language=${ language }&uselang=${ language }&format=json&origin=*`;
+	const url = baseUrl + `/w/api.php?action=wbsearchentities&search=${ encodeURIComponent( searchTerm ) }&language=${ language }&uselang=${ language }&format=json&origin=*`;
 	const response = await fetch( url );
 	return response.json();
 }
 
 async function getEntities( entityIds ) {
-	const url = `https://data.arch.be/w/api.php?action=wbgetentities&ids=${ entityIds.join( '|' ) }&props=claims&format=json&origin=*`;
+	const url = baseUrl + `/w/api.php?action=wbgetentities&ids=${ entityIds.join( '|' ) }&props=claims&format=json&origin=*`;
 	const response = await fetch( url );
 	return response.json();
 }
