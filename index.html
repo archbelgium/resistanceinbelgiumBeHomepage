@@ -35,6 +35,8 @@
     <link rel="alternate" hreflang="de" href="https://data.arch.be/?lang=de">
 
     <script>
+        const baseUrl = '';
+
 		function detectLanguageAndRedirect() {
 			const supportedLanguages = [ 'en', 'fr', 'nl', 'de' ];
 			const currentLanguage = ( new URLSearchParams( window.location.search ) ).get( 'lang' );

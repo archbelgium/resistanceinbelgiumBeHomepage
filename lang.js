@@ -32,8 +32,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Data",
 		menuLinks: {
-			about: '/wiki/About',
-			faq: '/wiki/FAQ',
+			about: '/wiki/About/en',
+			faq: '/wiki/FAQ/en',
 			data: '#'
 		},
 		logos: {
@@ -76,8 +76,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Données",
 		menuLinks: {
-			about: '/wiki/%C3%80_propos',
-			faq: '/wiki/Foire_Aux_Questions',
+			about: '/wiki/About/fr',
+			faq: '/wiki/FAQ/fr',
 			data: '#'
 		},
 		logos: {
@@ -120,8 +120,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Gegevens",
 		menuLinks: {
-			about: '/wiki/Over_ons',
-			faq: '/wiki/Vraagbaak',
+			about: '/wiki/About/nl',
+			faq: '/wiki/FAQ/nl',
 			data: '#'
 		},
 		logos: {
@@ -164,8 +164,8 @@ const translations = {
 		faq: "FAQ",
 		data: "Daten",
 		menuLinks: {
-			about: '/wiki/%C3%9Cber_uns',
-			faq: '/wiki/H%C3%A4ufig_gestellte_Fragen',
+			about: '/wiki/About/de',
+			faq: '/wiki/FAQ/de',
 			data: '#'
 		},
 		logos: {
@@ -188,7 +188,7 @@ const loadContentForLanguage = lang => {
 	document.querySelector( 'meta[name="description"]' ).setAttribute( "content", getTranslation( lang, 'metaDescription' ) );
 	document.querySelectorAll( '[data-translate]' ).forEach( el => el.innerHTML = getTranslation( lang, el.getAttribute( 'data-translate' ) ) );
 	document.querySelectorAll( '[data-translate-placeholder]' ).forEach( el => el.placeholder = getTranslation( lang, el.getAttribute( 'data-translate-placeholder' ) ) );
-	document.querySelectorAll( '[data-translate-href]' ).forEach( el => el.href = getTranslation( lang, el.getAttribute( 'data-translate-href' ) ) );
+	document.querySelectorAll( '[data-translate-href]' ).forEach( el => el.href = baseUrl + getTranslation( lang, el.getAttribute( 'data-translate-href' ) ) );
 	document.querySelectorAll( '[data-translate-alt]' ).forEach( el => el.alt = getTranslation( lang, el.getAttribute( 'data-translate-alt' ) ) );
 	document.querySelectorAll( '[data-translate-title]' ).forEach( el => el.title = getTranslation( lang, el.getAttribute( 'data-translate-title' ) ) );
 

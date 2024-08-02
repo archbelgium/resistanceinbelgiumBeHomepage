@@ -4,8 +4,6 @@ let currentFocus = -1;
 const searchInput = document.getElementById( 'search' );
 const resultsDiv = document.getElementById( 'results' );
 
-const baseUrl = '';
-
 document.addEventListener( 'click', ( event ) => {
 	if( !resultsDiv.contains( event.target ) && !searchInput.contains( event.target ) ) {
 		resultsDiv.classList.remove( 'show' );
