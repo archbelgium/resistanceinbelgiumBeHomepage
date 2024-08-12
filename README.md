@@ -14,3 +14,7 @@ Simply open the index.html file in your browser.
 
 Messages and some links can be changed via the lang.js file. For some links, you need to edit index.html to change
 them.
+
+## Resistance in Belgium
+
+Resistance in Belgium is the fruit of a [pilot project](https://cegesoma.be/en/project/wikibase-resistance) of the [State Archives in Belgium](https://arch.arch.be/) carried out by [CegeSoma](https://www.cegesoma.be/). 
