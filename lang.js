@@ -3,16 +3,17 @@ const translations = {
 		title: "Resistance in Belgium",
 		metaDescription: "Learn about the Belgian Resistance during World War II. Explore the stories of bravery and sacrifice that contributed to the liberation of Belgium.",
 		hero: {
-			title: "SEARCH FOR MEMBERS OF THE <br> RESISTANCE IN BELGIUM",
-			description: "Search for members of the resistance",
-			searchPlaceholder: "Search for a keyword, a name, a place, an event, or a source"
+			title: "Search for resistance members",
+			description: "Search for resistance members",
+			searchPlaceholder: "Search for a name..."
 		},
 		content: {
-			title: "Resistance in Belgium",
-			paragraph1: "During World War II, Belgium was home to a significant resistance movement. The Belgian Resistance played a crucial role in gathering intelligence, aiding Allied soldiers, and sabotaging German military operations. Comprising various groups such as the Front de l'Indépendance, Groupe G, and the Armée Secrète, these brave individuals risked their lives to fight against the occupying forces.",
-			paragraph2: "The resistance efforts included distributing underground newspapers, organizing escape routes for downed Allied airmen, and carrying out acts of sabotage to disrupt the German war effort. Women and men from all walks of life participated, demonstrating incredible courage and solidarity in the face of oppression.",
-			paragraph3: "Today, the legacy of the Belgian Resistance is remembered and honored for its contribution to the liberation of Belgium and the ultimate defeat of Nazi Germany. Their stories of bravery and sacrifice continue to inspire future generations.",
-			learnMore: "Learn More About the Belgian Resistance"
+			title: "The Resistance 1940 - 1945 database",
+			paragraph1: "<em>Resistance in Belgium</em> is the result of a pilot project run by CegeSoma/State Archives of Belgium. This platform enables research into thousands of people involved in <b>resistance activities during the Second World War in Belgium</b> or, in some cases, in neighbouring countries such as France in particular. It currently contains information on almost 400 resistance organisations and on more than <b>40,000 people</b> for whom a preparatory file was opened by the State Security Service (Sûreté de l’État/Staatsveiligheid) for the granting of the status of Intelligence and Intervention Agent (Agent de Renseignements et d’Action/Inlichtingen- en Actieagent). New data will be added regularly.",
+			paragraph2: "<h5>Transversal search</h5>Would you like to carry out more advanced search queries, for example based on the municipality of residence or the membership in a resistance organisation? See our page on transversal search for more information.",
+			paragraph3: "<h5>FAQ & Re-use of data</h5> Questions about our platform? Do you need assistance for your research? Do you have any questions about the origin of the data? Please consult the <a href=\"/wiki/FAQ\" style=\"color: #158f68;\">FAQ</a> for further information.</br> Would you like to quote or re-use content found on <em>Resistance in Belgium</em>? Please consult our practical <a href=\"/wiki/licence\" style=\"color: #158f68;\">information page</a> to make sure to re-use contents in the correct manner.",
+			paragraph4: "<h5>The Resistance in Belgium </h5> Would you like to find out more about the Resistance in Belgium, its forms of action, structures, motivations and values? For more information, please visit our platform <a href=\"https://www.belgiumwwii.be/\" target=\"_blank\" style=\"color: #158f68;\">Belgium WWII</a> and the <a href=\"https://www.belgiumwwii.be/belgique-en-guerre/les-themes/la-resistance.html/\" target=\"_blank\" style=\"color: #158f68;\">topical page about the Resistance</a> <em>(FR)</em>.",
+			learnMore: "Learn more about Resistance in Belgium"
 		},
 		footer: {
 			contact: "Contact",
@@ -20,12 +21,12 @@ const translations = {
 			ethics: "Statement of Ethics",
 			support: "Support Our Mission",
 			rightsReserved: "© 2024 Resistance in Belgium. All rights reserved.",
-			link1: 'Contact',
-			link2: 'Data protection',
+			link1: 'Protection of privacy',
+			link2: 'About',
 			link3: 'Contact',
-			link1Href: '#',
-			link2Href: '#',
-			link3Href: '#',
+			link1Href: '/wiki/Protection_of_privacy',
+			link2Href: '/wiki/About',
+			link3Href: '/wiki/Contact',
 		},
 		infoText: "All data is not yet online and this will take place in several phases over several years. Stay tuned for more updates.",
 		about: "About",
@@ -55,7 +56,7 @@ const translations = {
 			title: "La base de données Résistance 1940 - 1945",
 			paragraph1: "<em>Resistance in Belgium</em> est le fruit d’un projet pilote mené par le CegeSoma/Archives de l’État en Belgique. Cette plateforme vous permet d’effectuer des recherches sur les milliers de personnes impliquées dans des <b>activités de résistance durant la Seconde Guerre mondiale en Belgique</b> ou, dans certains cas, dans des pays voisins, en particulier la France. Actuellement, elle contient des informations sur plus de <b>40 000 personnes</b> pour lesquelles un dossier préparatoire au Statut d’Agent de Renseignements et d’Action a été produit par la Sûreté de l’État, ainsi que sur près de 400 organisations de résistance. De nouvelles données seront régulièrement ajoutées.",
 			paragraph2: "<h5>Recherches transversales</h5>Vous souhaitez effectuer des recherches plus larges, par exemple sur la base d’une commune de domicile ou de l’appartenance à des organisations de résistance ? Consultez notre page sur les recherches transversales pour plus d'informations.",
-			paragraph3: "<h5>FAQ et réutilisation des données</h5>Vous avez des questions sur notre plateforme ? Vous aimeriez de l'aide pour effectuer vos recherches ? Vous avez des questions sur l'origine des données ? Consultez notre <a href=\"https://data.arch.be/wiki/FAQ/fr\" style=\"color: #158f68;\">FAQ</a> pour plus d'informations. </br>Vous souhaitez citer ou réutiliser du contenu trouvé sur <em>Resistance in Belgium</em> ? Consultez notre <a href=\"https://data.arch.be/wiki/licence/fr\" style=\"color: #158f68;\">page d'information</a> pour vous assurer que vous réutilisez le contenu de façon adéquate.",
+			paragraph3: "<h5>FAQ & réutilisation des données</h5>Vous avez des questions sur notre plateforme ? Vous aimeriez de l'aide pour effectuer vos recherches ? Vous avez des questions sur l'origine des données ? Consultez notre <a href=\"/wiki/FAQ/fr\" style=\"color: #158f68;\">FAQ</a> pour plus d'informations. </br>Vous souhaitez citer ou réutiliser du contenu trouvé sur <em>Resistance in Belgium</em> ? Consultez notre <a href=\"/wiki/licence/fr\" style=\"color: #158f68;\">page d'information</a> pour vous assurer que vous réutilisez le contenu de façon adéquate.",
 			paragraph4: "<h5>La résistance en Belgique</h5>Vous souhaitez en savoir plus sur la Résistance en Belgique, ses formes d’actions, ses structures, ses motivations et ses valeurs ? Pour en savoir plus, consultez notre plateforme <a href=\"https://www.belgiumwwii.be/\" target=\"_blank\" style=\"color: #158f68;\">Belgium WWII</a> et la <a href=\"https://www.belgiumwwii.be/belgique-en-guerre/les-themes/la-resistance.html/\" target=\"_blank\" style=\"color: #158f68;\">page thématique consacrée à la Résistance</a>.",
 			learnMore: "En savoir plus sur Resistance in Belgium"
 		},
@@ -64,7 +65,7 @@ const translations = {
 			followUs: "Suivez-nous :",
 			ethics: "Déclaration d'éthique",
 			support: "Soutenez notre mission",
-			rightsReserved: "© 2024 Résistance en Belgique. Tous droits réservés.",
+			rightsReserved: "© 2024 Resistance in Belgium. Tous droits réservés.",
 			link1: 'Protection de la vie privée',
 			link2: 'À propos',
 			link3: 'Contact',
@@ -100,7 +101,7 @@ const translations = {
 			title: "Verzetsdatabank 1940 - 1945",
 			paragraph1: "<em>Resistance in Belgium</em> is het resultaat van een pilootproject van het CegeSoma/Rijksarchief in België. Het platform maakt het mogelijk opzoekingen te doen over de duizenden mensen die <b>tijdens Wereldoorlog II betrokken waren bij verzetsdaden in België of</b>, in een aantal gevallen, in de buurlanden, voornamelijk in Frankrijk. Momenteel bevat de databank informatie over meer dan <b>40.000 personen</b> waarvoor de Staatsveiligheid een voorbereidend dossier had aangelegd voor het bekomen van het statuut van actie- en inlichtingsagent, en over bijna 400 verzetsorganisaties. Regelmatig worden nieuwe gegevens toegevoegd.",
 			paragraph2: "<h5>Transversaal onderzoek </h5> Voor informatie over meer gedetailleerde opzoekingen, bijvoorbeeld op basis van een gemeente van verblijf of van de verbondenheid met een verzetsorganisatie, kan u terecht op de webpagina over transversaal onderzoek.",
-			paragraph3: "<h5>FAQ & hergebruik van de gegevens</h5>Heeft u nog vragen over ons platform, wil u hulp om opzoekingen te doen of heeft u vragen over de oorsprong van de gegevens, bekijk dan onze <a href=\"https://data.arch.be/wiki/FAQ/nl\" style=\"color: #158f68;\">FAQ</a> voor meer informatie. </br>Wil u inhoud die u heeft gevonden op <em>Resistance in Belgium</em> citeren of hergebruiken, raadpleeg dan onze <a href=\"https://data.arch.be/wiki/licence/nl\" style=\"color: #158f68;\">informtiepagine</a> om u ervan te vergewissen dat u de inhoud correct hergebruikt.",
+			paragraph3: "<h5>FAQ & hergebruik van de gegevens</h5>Heeft u nog vragen over ons platform, wil u hulp om opzoekingen te doen of heeft u vragen over de oorsprong van de gegevens, bekijk dan onze <a href=\"/wiki/FAQ/nl\" style=\"color: #158f68;\">FAQ</a> voor meer informatie. </br>Wil u inhoud die u heeft gevonden op <em>Resistance in Belgium</em> citeren of hergebruiken, raadpleeg dan onze <a href=\"/wiki/licence/nl\" style=\"color: #158f68;\">informtiepagine</a> om u ervan te vergewissen dat u de inhoud correct hergebruikt.",
 			paragraph4: "<h5>Het Verzet in België </h5> Voor meer informatie over het verzet in België, zijn acties, structuren, motivatie en waarden, verwijzen we naar ons platform <a href=\"https://www.belgiumwwii.be/\" target=\"_blank\" style=\"color: #158f68;\">Belgium WWII</a> en naar de <a href=\"https://www.belgiumwwii.be/belgique-en-guerre/les-themes/la-resistance.html/\" target=\"_blank\" style=\"color: #158f68;\">thematische webpagina over het Verzet</a>.",
 			learnMore: "Meer informatie over Resistance in Belgium"
 		},
@@ -109,7 +110,7 @@ const translations = {
 			followUs: "Volg ons:",
 			ethics: "Ethische verklaring",
 			support: "Ondersteun onze missie",
-			rightsReserved: "© 2024 Verzet in België. Alle rechten voorbehouden.",
+			rightsReserved: "© 2024 Resistance in Belgium. Alle rechten voorbehouden.",
 			link1: 'Respect voor privacy',
 			link2: 'Over',
 			link3: 'Contact',
@@ -134,32 +135,34 @@ const translations = {
 		}
 	},
 	de: {
-		title: "Widerstand in Belgien",
+		title: "Resistance in Belgium",
 		metaDescription: "Erfahren Sie mehr über den belgischen Widerstand während des Zweiten Weltkriegs. Entdecken Sie Geschichten von Tapferkeit und Opferbereitschaft, die zur Befreiung Belgiens beigetragen haben.",
 		hero: {
-			title: "Suchen Sie nach Mitgliedern des </br> Widerstands in Belgien",
-			description: "Suche nach Mitgliedern des Widerstands",
-			searchPlaceholder: "Suchen Sie nach einem Schlüsselwort, einem Namen, einem Ort, einem Ereignis oder einer Quelle"
+			title: "Suchen Sie nach Widerstandsmitgliedern",
+			description: "Suchen Sie nach Widerstandsmitgliedern",
+			searchPlaceholder: "Suchen Sie nach einem Namen..."
 		},
 		content: {
-			title: "Widerstand in Belgien",
-			paragraph1: "Während des Zweiten Weltkriegs war Belgien die Heimat einer bedeutenden Widerstandsbewegung. Der belgische Widerstand spielte eine entscheidende Rolle bei der Sammlung von Informationen, der Unterstützung alliierter Soldaten und der Sabotage deutscher Militäroperationen. Diese mutigen Individuen, bestehend aus verschiedenen Gruppen wie dem Front de l'Indépendance, Groupe G und der Armée Secrète, riskierten ihr Leben, um gegen die Besatzungstruppen zu kämpfen.",
-			paragraph2: "Zu den Widerstandsbemühungen gehörten die Verteilung von Untergrundzeitungen, die Organisation von Fluchtrouten für abgeschossene alliierte Flieger und die Durchführung von Sabotageakten, um die deutsche Kriegsführung zu stören. Frauen und Männer aus allen Gesellschaftsschichten nahmen teil und zeigten unglaublichen Mut und Solidarität angesichts der Unterdrückung.",
-			paragraph3: "Heute wird das Erbe des belgischen Widerstands für seinen Beitrag zur Befreiung Belgiens und zur endgültigen Niederlage Nazideutschlands erinnert und geehrt. Ihre Geschichten von Mut und Opferbereitschaft inspirieren auch zukünftige Generationen.",
-			learnMore: "Mehr über den belgischen Widerstand erfahren"
+			title: "Resistance in Belgium",
+			paragraph1: "<em>Resistance in Belgium</em> ist das Ergebnis eines vom CegeSoma/Belgisches Staatsarchiv durchgeführten Pilotprojekts. Die Plattform ermöglicht die Suche nach Tausenden von Personen, die <b>während des Zweiten Weltkriegs in Belgien in Widerstandsaktivitäten aktiv waren</b> oder in einigen Fällen auch in Nachbarländern, insbesondere in Frankreich. Derzeit enthält die Datenbank Informationen über mehr als <b>40.000 Personen</b>, zu denen die Staatssicherheit eine Vorbereitungsakte mit dem Status „Agent de Renseignements et d'Action“ (Interventions- und Geheimdienstagent) erstellt hat, sowie über fast 400 Widerstandsorganisationen. Neue Daten werden regelmäßig hinzugefügt.",
+			paragraph2: "<h5>Erweiterte Suche</h5>Möchten Sie umfassendere Nachforschungen durchführen, z. B. auf der Grundlage des Wohnorts einer Person oder Mitgliedschaft in Widerstandsorganisationen? Besuchen Sie unsere Seite zur erweiterten Suche für zusätzliche Informationen.",
+			paragraph3: "<h5>FAQ & Weiterverwendung von Daten</h5>Fragen zu Plattform? Hilfe bei Ihren Recherchen nötig? Fragen zur Herkunft der Daten? Ausführliche Informationen sind in den <a href=\"/wiki/FAQ/de\" style=\"color: #158f68;\">Häufig gestellten Fragen (FAQ)</a> zu finden. </br>Möchten Sie Inhalte, die Sie auf <em>Resistance in Belgium</em> gefunden haben, zitieren oder weiterverwenden? Bitte lesen Sie <a href=\"/wiki/licence/de\" style=\"color: #158f68;\">diese Informationen</a> und stellen Sie sicher, dass Sie die Inhalte ordnungsgemäß weiterverwenden.",
+			paragraph4: "<h5>Möchten Sie mehr über den Widerstand in Belgien, seine Aktionsformen, seine Strukturen, seine Motivationen und Werte erfahren? Weitere Informationen finden Sie auf unserer Plattform <a href=\"https://www.belgiumwwii.be/\" target=\"_blank\" style=\"color: #158f68;\">Belgium WWII</a> und die <a href=\"https://www.belgiumwwii.be/de/belgien-im-krieg/major-themes/la-resistance.html\" target=\"_blank\" style=\"color: #158f68;\">Themenseite zum Widerstand</a>."
+			,
+			learnMore: "Mehr über Resistance in Belgium"
 		},
 		footer: {
 			contact: "Kontakt",
 			followUs: "Folge uns:",
 			ethics: "Ethikerklärung",
 			support: "Unterstütze unsere Mission",
-			rightsReserved: "© 2024 Widerstand in Belgien. Alle Rechte vorbehalten.",
-			link1: 'Kontakt',
-			link2: 'Datenschutz',
-			link3: 'Lorem Ipsum',
-			link1Href: '#',
-			link2Href: '#',
-			link3Href: '#',
+			rightsReserved: "© 2024 Resistance in Belgium. Alle Rechte vorbehalten.",
+			link1: 'Achtung der Privatsphäre',
+			link2: 'Über uns',
+			link3: 'Kontakt',
+			link1Href: '/wiki/Protection_of_privacy/de',
+			link2Href: '/wiki/About/de',
+			link3Href: '/wiki/Contact/de',
 		},
 		infoText: "Noch sind nicht alle Daten online verfügbar, und dies wird in mehreren Phasen über mehrere Jahre hinweg geschehen. Bleiben Sie dran für weitere Updates.",
 		about: "Über",
