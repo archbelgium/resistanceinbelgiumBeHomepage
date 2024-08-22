@@ -5,7 +5,7 @@ const translations = {
 		hero: {
 			title: "Search for resistance members",
 			description: "Search for resistance members",
-			searchPlaceholder: "Search for a name..."
+			searchPlaceholder: "Search for the name of a person, organisation or archive..."
 		},
 		content: {
 			title: "The Resistance 1940 - 1945 database",
@@ -50,7 +50,7 @@ const translations = {
 		hero: {
 			title: "Recherchez des résistant⸱e⸱s",
 			description: "Rechercher des résistant⸱e⸱s",
-			searchPlaceholder: "Recherchez un nom..."
+			searchPlaceholder: "Recherchez un nom de personne, d'organisation ou de fonds d'archives..."
 		},
 		content: {
 			title: "La base de données Résistance 1940 - 1945",
@@ -95,7 +95,7 @@ const translations = {
 		hero: {
 			title: "Zoek naar verzetsleden",
 			description: "Zoek naar verzetsleden",
-			searchPlaceholder: "Zoek naar een naam..."
+			searchPlaceholder: "Zoek naar de naam van een persoon, organisatie of archief..."
 		},
 		content: {
 			title: "Verzetsdatabank 1940 - 1945",
@@ -140,7 +140,7 @@ const translations = {
 		hero: {
 			title: "Suchen Sie nach </br> Widerstandsmitgliedern",
 			description: "Suchen Sie nach Widerstandsmitgliedern",
-			searchPlaceholder: "Suchen Sie nach einem Namen..."
+			searchPlaceholder: "Suchen Sie nach dem Namen einer Person, einer Organisation oder eines Archivbestands..."
 		},
 		content: {
 			title: "Die Widerstandsdatenbank 1940 - 1945",
