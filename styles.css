@@ -173,3 +173,23 @@
 		margin-left: 10px !important;
 	}
 }
+/* New "Show all results" */
+#results a[href*="Special:Search"] {
+	background-color: #4d725d !important;
+	color: white !important;
+	font-weight: 400;
+	text-align: center;
+	padding: 10px 20px;
+	display: block;
+	text-decoration: none;
+	border-radius: 4px;
+	margin-top: 10px;
+	font-family: inherit;
+}
+
+#results a[href*="Special:Search"]:hover {
+	background-color: white !important;
+	color: #4d725d !important;
+	text-decoration: underline;
+	border: 1px solid #4d725d;
+}

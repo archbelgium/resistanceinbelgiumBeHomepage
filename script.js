@@ -133,6 +133,25 @@ function displayResults( results ) {
 		} );
 	} );
 
+	// New Add "Show all results"
+	const searchTerm = searchInput.value.trim();
+	if (searchTerm) {
+		const extraLink = document.createElement( 'a' );
+		extraLink.classList.add( 'dropdown-item', 'search-footer' );
+		extraLink.href = `${baseUrl}/w/index.php?search=${encodeURIComponent(searchTerm)}&title=Special:Search`;
+		const lang = new URLSearchParams(window.location.search).get('lang') || 'en';
+		const showAllResultsText = {
+			en: 'Show all results',
+			fr: 'Afficher tous les résultats',
+			nl: 'Toon alle resultaten',
+			de: 'Alle Ergebnisse anzeigen'
+		}[lang] || 'Show all results';
+		extraLink.textContent = showAllResultsText;
+		
+
+		resultsDiv.appendChild( extraLink );
+	}
+
 	if( results.length === 1 ) {
 		currentFocus = 0;
 		addActive( resultsDiv.getElementsByClassName( 'dropdown-item' ) );
